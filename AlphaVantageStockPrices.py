@@ -17,12 +17,10 @@ def append_line(filepath, text):
         f.write(text + "\n")
 
 def main():
-    API_KEY = "PM3TEJGFH2WHWPIG"  # Replace with your actual Alpha Vantage API key
+    API_KEY = "<Your API key>"  # Replace with your actual Alpha Vantage API key
     SYMBOL = "TSLA"
     START_DATE = "2024-04-01"
     END_DATE = "2025-04-10"
-    # [2025-01-01, 2025-08-04]
-    # [2024-01-01, 2024-12-31]
 
     stock_data = get_daily_stock_prices(API_KEY, SYMBOL, START_DATE, END_DATE)
     stock_data = stock_data.sort_index(ascending=True)
