@@ -154,16 +154,13 @@ fig.tight_layout()
 plt.title("Stock Close Price and Volume Over Time")
 plt.show()
 
-
 # ---------- Merge ddf with stock_df ----------
 merged_ddf = pd.merge(ddf, stock_df, on='date', how='left')
 merged_ddf = merged_ddf.fillna(0)
 
-
 ###############################################################
 # --- Correlation and heatmap ---------------------------------
 #
-
 # Select the relevant columns
 cols = ['av_sentiment_score', 'bg_sentiment_score','va_sentiment_score','close','volume']  # Add more if needed
 
@@ -215,13 +212,11 @@ for n in range(1, n_lags + 1):
     plt.tight_layout()
     plt.show()
 
-
 # Access a specific correlation matrix if needed
 # For example, to get the correlation matrix for lag 1:
 # lag_1_corr_matrix = corr_matrices['lag_1']
 # ...
 # lag_3_corr_matrix = corr_matrices['lag_3']
-
 
 ###################################################################
 # Plotting the positive and negative word counts over time
